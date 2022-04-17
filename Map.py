@@ -11,25 +11,27 @@ step = 0.1 # step in for loop and "x" step
 def upperHeartFunction(num):
     return m.sqrt(1 - (abs(num) - 1) ** 2)
 
-def main():
+def pointCounter(function):
     # this loop creates points that are used to check the accuracy of the compaction (ex. in Geogebra)
     # https://www.geogebra.org/calculator/evakcq4n
 
+    points = ""
+    map = []
+    tmp = 0
     for x in np.arange(-2, 2 + step, step):
         x = round(x, outputRound)
         y = round(upperHeartFunction(x), outputRound) # function whose points are searched for
     
-        print('({},{}),'.format(x, y), end = "")
-
-    print("\n\n")
-    # due to fact that "x" step is constant, only difference between consecutive y is needed
-
-    tmp = 0
-    for x in np.arange(-2, 2 + step, step):
-        x = round(x, outputRound)
-        y = round(m.sqrt(1 - (abs(x) - 1) ** 2), outputRound)
-        print(round(y-tmp, outputRound), ", ", end = "")
+        points = points + ('({},{}),'.format(x, y))
+        # due to fact that "x" step is constant, only difference between consecutive y is needed
+        map.append(round(y-tmp, outputRound))
         tmp = y
+    
+    return points, map
+
+def main():
+    upperPoints, upperMap = pointCounter(upperHeartFunction)
+    print("\nPoints = ", upperPoints, "\n\nMap = ", upperMap)
 
 if __name__ == '__main__':
     main()
