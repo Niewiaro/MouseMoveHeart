@@ -12,3 +12,13 @@ for x in np.arange(-2, 2 + step, step):
     y = round(m.sqrt(1 - (abs(x) - 1) ** 2), outputRound) # function whose points are searched for
   
     print('({},{}),'.format(x, y), end = "")
+
+print("\n\n")
+# due to fact that "x" step is constant, only difference between consecutive y is needed
+
+tmp = 0
+for x in np.arange(-2, 2 + step, step):
+    x = round(x, outputRound)
+    y = round(m.sqrt(1 - (abs(x) - 1) ** 2), outputRound)
+    print(round(y-tmp, outputRound), ", ", end = "")
+    tmp = y
