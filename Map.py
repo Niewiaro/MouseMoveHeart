@@ -39,5 +39,13 @@ def main():
     print("\nUpper points = ", upperPoints, "\n\nBottom points = ", bottomPoints,)
     print("\nUpper map = ", upperMap, "\n\nBottom map = ", bottomMap)
 
+    finalMap = [int(element * 100) for element in upperMap]
+
+    bottomMap.reverse() # reverse because bottom part must start where upper finish
+    finalMap.extend(int(element * 100) for element in bottomMap)
+    finalMap.pop(0) # delate first and last element, because there are 0 movment what is just dalay for map
+    finalMap.pop()
+    print("\nMap to copy = ", finalMap)
+
 if __name__ == '__main__':
     main()
