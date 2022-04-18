@@ -1,21 +1,30 @@
 #include <Arduino.h>
+#include <Mouse.h>
 
-int RXLED = 17; // The RX LED has a defined Arduino pin
-int TXLED = 30; // The TX LED has a defined Arduino pin
+#define xStep 10
+#define mapSize 80
 
-// the setup function runs once when you press reset or power the board
+bool right = true;
+int tab[] = {44, 16, 11, 9, 7, 5, 3, 3, 1, 1, -1, -1, -3, -3, -5, -7, -9, -11, -16, -44, 44, 16, 11, 9, 7, 5, 3, 3, 1, 1, -1, -1, -3, -3, -5, -7, -9, -11, -16, -44, 45, 19, 16, 13, 12, 11, 11, 10, 10, 10, 10, 10, 11, 10, 11, 12, 14, 15, 19, 45, -45, -19, -15, -14, -12, -11, -10, -11, -10, -10, -10, -10, -10, -11, -11, -12, -13, -16, -19, -45};
+
 void setup() {
-  
-  pinMode(RXLED, OUTPUT); // Set RX LED as an output
-  pinMode(TXLED, OUTPUT); // Set TX LED as an output
+  delay(5000);
 }
 
-// the loop function runs over and over again forever
 void loop() {
-  digitalWrite(RXLED, HIGH); // set the LED off
-  digitalWrite(TXLED, LOW); // set the LED off
-  delay(300);                       // wait for a second
-  digitalWrite(RXLED, LOW); // set the LED on
-  digitalWrite(TXLED, HIGH); // set the LED on
-  delay(300);                       // wait for a second
+  for(int i = 0; i < mapSize; i++) {
+    if(i == mapSize / 2)
+      right = false;
+    
+    else if (i == 0)
+      right = true;
+    
+    if(right)
+      Mouse.move(xStep, tab[i], 0);
+    
+    else
+      Mouse.move(-xStep, tab[i], 0);
+
+    delay(100);
+  }
 }

@@ -46,6 +46,7 @@ def main():
     finalMap.pop(0) # delate first and last element, because there are 0 movment what is just dalay for map
     finalMap.pop()
     print("\nMap to copy = ", finalMap)
+    print("\nMap size = ", len(finalMap))
 
 if __name__ == '__main__':
     main()
