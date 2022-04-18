@@ -38,7 +38,7 @@ WARNING
 If any changes have been made in Map.py file it is nessesery to copy new map to Cpp file and edit mapSize parameter!
 
 ## Acknowledgements
-- This project was inspired by friend of main who didn't want to her laptop fall asleep ;).
+- This project was inspired by friend of mine who didn't want to her laptop fall asleep ;).
 - This project was based on Slawomir Chodnicki Heart function equasion (https://towardsdatascience.com/plot-the-shape-of-my-heart-698d4776c51a).
 
 ## Idea Behind Project
