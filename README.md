@@ -18,6 +18,7 @@
 ## Technologies Used
 - Python 3.9.1
 - Arduino 1.8.19
+- Mouse (by Arduino) 1.0.1
 
 ## Features
 - Move mouse in the shape of a heart.
