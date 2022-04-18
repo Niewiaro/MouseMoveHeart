@@ -17,8 +17,6 @@ void setup() {
 
 void loop() {
   counter = 0;
-  Mouse.press(); // to test if heart stay in the same place after some time
-  // test will be in paint and resulted by its drawing
 
   for(counter; counter < mapSize / 2; counter++) {
     Mouse.move(xStep, 0, 0);
