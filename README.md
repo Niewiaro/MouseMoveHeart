@@ -23,6 +23,8 @@
 ## Features
 - Move mouse in the shape of a heart.
 
+![](/images/20220418_154246.GIF)
+
 ## Setup
 To setup project it is required to intstal on 32u4 or SAMD micro based boards (Pro Micro, Leonardo, Esplora, Zero, Due and MKR Family) an Cpp file included in repository. To control cursor movement it in needet to connect computer through their micro’s native USB port.
 
