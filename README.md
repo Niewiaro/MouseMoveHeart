@@ -45,5 +45,7 @@ This link contain Geogebra model that show Heart equation and points which trave
 
 Simulary mouse travel to next points using this schematic.
 
+![](/images/Geogebra.JPG)
+
 ## Contact
 Created by [@niewiaro](https://github.com/Niewiaro)
