@@ -2,7 +2,8 @@ import math as m
 import numpy as np
 
 outputRound = 2 # how many digits after dot
-step = 0.1 # step in for loop and "x" step 
+step = 0.01 # step in for loop and "x" step 
+enlarge = 100 # define how big heart will be
 
 # articule about heart function
 # https://towardsdatascience.com/plot-the-shape-of-my-heart-698d4776c51a
@@ -39,12 +40,13 @@ def main():
     print("\nUpper points = ", upperPoints, "\n\nBottom points = ", bottomPoints,)
     print("\nUpper map = ", upperMap, "\n\nBottom map = ", bottomMap)
 
-    finalMap = [int(element * 100) for element in upperMap]
+    finalMap = [int(element * enlarge) for element in upperMap]
 
     bottomMap.reverse() # reverse because bottom part must start where upper finish
-    finalMap.extend(int(element * 100) for element in bottomMap)
+    finalMap.extend(int(element * enlarge) for element in bottomMap)
     finalMap.pop(0) # delate first and last element, because there are 0 movment what is just dalay for map
     finalMap.pop()
+    print("\nupper size = ", len(upperMap) - 1, "\nbottom size = ", len(bottomMap) - 1)
     print("\nMap to copy = ", finalMap)
     print("\nMap size = ", len(finalMap))
 
