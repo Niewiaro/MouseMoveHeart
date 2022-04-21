@@ -23,7 +23,7 @@
 ## Features
 - Move mouse in the shape of a heart.
 
-![](/images/20220418_154246.GIF)
+![](/images/20220418_154246.gif)
 
 ## Setup
 To setup project it is required to intstal on 32u4 or SAMD micro based boards (Pro Micro, Leonardo, Esplora, Zero, Due and MKR Family) an Cpp file included in repository. To control cursor movement it in needet to connect computer through their micro’s native USB port.
@@ -38,7 +38,7 @@ WARNING
 If any changes have been made in Map.py file it is nessesery to copy new map to Cpp file and edit mapSize parameter!
 
 ## Acknowledgements
-- This project was inspired by friend of main who didn't want to her laptop fall asleep ;).
+- This project was inspired by friend of mine who didn't want to her laptop fall asleep ;).
 - This project was based on Slawomir Chodnicki Heart function equasion (https://towardsdatascience.com/plot-the-shape-of-my-heart-698d4776c51a).
 
 ## Idea Behind Project
