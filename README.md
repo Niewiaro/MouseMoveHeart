@@ -52,3 +52,4 @@ Simulary mouse travel to next points using this schematic.
 
 ## Contact
 Created by [@niewiaro](https://github.com/Niewiaro)
+niewiarowski.kuba@gmail.com
